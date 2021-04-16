@@ -1,0 +1,16 @@
+`04-QueryForEachReasource`(){
+    get request {
+        url : "https://jsonplaceholder.typicode.com/users"
+    } matching body object results.for(data)=>{
+        "id":data.id,
+        "name":data.name
+    }
+    results.for(data,i)=>{
+        get request {
+            url: text `https://jsonplaceholder.typicode.com/users/<%data.id%>`
+        } matching body object data.queryResult
+        print text `Got <%i%>th Result <%data.queryResult%>`
+    }
+
+    print text `<%results%>`
+}

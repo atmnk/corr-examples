@@ -1,0 +1,4 @@
+`02-SumTwoNumbersFromUser`(){
+    let sum = firstInteger:Integer + secondInteger:Integer
+    print text `Sum of <%firstInteger%> and <%secondInteger%>  is <% sum %>`
+}

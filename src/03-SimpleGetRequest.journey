@@ -1,0 +1,10 @@
+`03-SimpleGetRequest`(){
+    get request {
+        url : "https://jsonplaceholder.typicode.com/todos"
+    } matching body object data.for(data)=>{
+        "id":data.id,
+        "title":data.title
+    }
+
+    print text `<%data%>`
+}
